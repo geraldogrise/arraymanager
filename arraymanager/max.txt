@@ -1,0 +1,47 @@
+/*function getAggregateInfo($list,$myReturnList,$query,$type){
+		      $class_name = get_class($list[0]);
+		      $ref_class = new ReflectionClass($class_name);
+			  $listFields = explode(",",$query);
+			  $map = function($v) { return  $v["chave"]; };
+			  $countArray = array_count_values(array_map($map, $myReturnList));
+			  ksort($countArray);
+			  $model = array();
+			  $arrayKeys = array();
+			  $arrayAggregate = array();
+			  $myListAggreg = array();
+			 
+			 
+			  foreach ($countArray as $key => $value){
+				 
+				 foreach($myReturnList as $element){
+				    
+					 if($element["chave"] == $key){
+					    $size = sizeof(explode("_",$key));
+						echo $key."<br>";
+						if(!in_array($key,$arrayKeys)){
+						   array_push($arrayKeys,$key);
+						    foreach($ref_class->getProperties() as $property){
+							    $val = $element[$property->getName()];
+								$myList[$property->getName()] = $val;
+								
+						    }
+						    array_push($model,$myList);
+					     }
+												
+				     }
+									
+				 }
+				
+				
+				
+				
+				 
+			  }
+			  
+			  
+			  
+			 
+			  return  $model;
+		
+		}*/
+	
